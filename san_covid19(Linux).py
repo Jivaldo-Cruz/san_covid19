@@ -4,9 +4,9 @@ try:
     from covid import Covid
 except ImportError:
     print("O seu computador não possui essa biblioteca!")
-    if(os.system == "nt"):
+    if(os.name == "nt"):# serve para instalar no windows
         os.system("pip3 install covid")
-    else:
+    else:# serve para instalar no linux
         os.system("sudo pip3 install covid")
 
 root = Tk()
